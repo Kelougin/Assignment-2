@@ -1,0 +1,245 @@
+<!DOCTYPE html> <!-- Doctype -->
+<html lang="en"> <!-- Set Language -->
+<head> <!-- Insert Meta Data -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Pizza Order Form">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Week 4 | Assignment 2</title>
+  <!-- add google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <!-- add our CSS -->
+  <link rel="stylesheet" href="./css/style.css">
+</head> <!-- End of Head -->
+<body> <!-- start of body -->
+<header> <!-- start of header -->
+  <!-- logo container -->
+  <div>
+    <a href="index.html"><img src="./img/Pizza.jpg" alt="header logo"></a>
+  </div>
+  <!-- site navigation -->
+  <nav>
+    <a href="index.html" target="_self">Sign In</a>
+  </nav>
+</header> <!-- End of Header -->
+<main> <!-- Start of Main -->
+  <form action="index.html" method="post" id="form"> <!-- start of form. sends data to index.html. method is post to keep credit card info secure -->
+    <section> <!-- Start of Size and Crust section -->
+      <h3>Size and Crust</h3> <!-- Title for section -->
+      <br> <!-- Line break or else my section looked fucked -->
+      <div> <!-- Two column section for Size choice -->
+        <input type="radio" name="size" id="small-size" value="small-size">
+        <label for="small-size">Small</label><br>
+        <input type="radio" name="size" id="medium-size" value="medium-size">
+        <label for="medium-size">Medium</label><br>
+      </div> <!-- Input types are radio so you can only chose one -->
+      <div>
+        <input type="radio" name="size" id="large-size" value="large-size">
+        <label for="large-size">Large</label><br>
+        <input type="radio" name="size" id="Exlarge-size" value="Exlarge-size">
+        <label for="Exlarge-size">Ex Large</label>
+      </div><br>
+      <hr> <!-- hr to split Size and Crust -->
+      <div> <!-- Two column section for Crust type -->
+        <input type="radio" name="crust" id="regular" value="regular">
+        <label for="regular">Regular Crust</label><br>
+        <input type="radio" name="crust" id="thincrust" value="thincrust">
+        <label for="thincrust">Thin Crust</label><br>
+      </div>
+      <div>
+        <input type="radio" name="crust" id="thickcrust" value="thickcrust">
+        <label for="thickcrust">Thick Crust</label>
+      </div>
+    </section> <!-- End of Size and Crust section -->
+    <section> <!-- Start of Sauce section -->
+      <h3>Choose Sauce</h3> <!-- Title for section -->
+      <br> <!-- br to prevent section from looking stupid -->
+      <div> <!-- Two column section for Sauce -->
+        <input type="radio" name="sauce" id="nosauce" value="nosauce">
+        <label for="nosauce">No Sauce</label><br>
+        <input type="radio" name="sauce" id="lightsauce" value="lightsauce">
+        <label for="lightsauce">Light Sauce</label><br>
+      </div> <!-- Input types radio so you can only choose one -->
+      <div>
+        <input type="radio" name="sauce" id="regsauce" value="regsauce">
+        <label for="regsauce">Regular Sauce</label><br>
+        <input type="radio" name="sauce" id="exsauce" value="exsauce">
+        <label for="exsauce">Extra Sauce</label><br>
+      </div>
+    </section> <!-- End of Sauce Section -->
+    <section> <!-- Start of Cheese Section -->
+      <h3>Choose Cheese</h3> <!-- Title for Section -->
+      <br> <!-- br to make my input fall in line -->
+      <div> <!-- Two column section for cheese -->
+        <input type ="checkbox" name="cheese" id="mozzarella" value="mozzarella">
+        <label for ="mozzarella">Mozarella Cheese</label><br>
+        <input type ="checkbox" name="cheese" id="cheddar" value="cheddar">
+        <label for ="cheddar">Cheddar Cheese</label>
+      </div> <!-- Input type checkbox so you can choose multiple cheeses -->
+      <div>
+        <input type ="checkbox" name="cheese" id="goat" value="goat">
+        <label for ="goat">Goat Cheese</label><br>
+        <input type ="checkbox" name="cheese" id="feta" value="feta">
+        <label for ="feta">Feta Cheese</label>
+      </div><br>
+      <hr> <!-- hr and br to separate cheese typ and cheese amount -->
+      <div> <!-- Two column section for cheese amount -->
+        <input type ="radio" name="cheese" id="regcheese" value="regcheese">
+        <label for ="regcheese">Regular Cheese</label><br>
+        <input type ="radio" name="cheese" id="excheese" value="excheese">
+        <label for ="excheese">Extra Cheese</label>
+      </div> <!-- Input type radio so you can only choose one. -->
+      <div>
+        <input type ="radio" name="cheese" id="nocheese" value="nocheese">
+        <label for ="nocheese">No Cheese</label>
+      </div>
+    </section> <!-- End of Cheese section -->
+    <section> <!-- Start of meat toppings -->
+      <h3>Choose Meat Toppings</h3> <!-- Title for meat section -->
+      <br> <!-- br to make my inputs fall in line -->
+      <div> <!-- Two Column section for Meat -->
+        <input type ="checkbox" name="meat" id="pepperoni" value="pepperoni">
+        <label for ="pepperoni">Pepperoni</label><br>
+        <input type ="checkbox" name="meat" id="realbacon" value="realbacon">
+        <label for ="realbacon">Real Bacon</label><br>
+        <input type ="checkbox" name="meat" id="chicken" value="chicken">
+        <label for ="chicken">Chicken</label><br>
+        <input type ="checkbox" name="meat" id="hotisausage" value="hotisausage">
+        <label for ="hotisausage">Hot Italian Sausage</label><br>
+        <input type ="checkbox" name="meat" id="shrimp" value="shrimp">
+        <label for ="shrimp">Shrimp</label><br>
+        <input type ="checkbox" name="meat" id="tuna" value="tuna">
+        <label for ="tuna">Tuna</label>
+      </div> <!-- Input type checkbox so you can choose multiple -->
+      <div>
+        <input type ="checkbox" name="meat" id="sausage" value="sausage">
+        <label for ="sausage">Sausage</label><br>
+        <input type ="checkbox" name="meat" id="groundbeef" value="groundbeef">
+        <label for ="groundbeef">Ground Beef</label><br>
+        <input type ="checkbox" name="meat" id="ham" value="ham">
+        <label for ="ham">Ham</label><br>
+        <input type ="checkbox" name="meat" id="salami" value="salami">
+        <label for ="salami">Salami</label><br>
+        <input type ="checkbox" name="meat" id="smokedmeat" value="smokedmeat">
+        <label for ="smokedmeat">Smoked Meat</label><br>
+        <input type ="checkbox" name="meat" id="anchovies" value="anchovies">
+        <label for ="anchovies">Anchovies</label>
+      </div>
+    </section> <!-- End of Meat Section -->
+    <section> <!-- Start of Veggie Section -->
+      <h3>Choose Veggie Toppings</h3> <!-- Title for section -->
+      <br> <!-- br to make inputs fall in line -->
+      <div> <!-- Two Column row for Veggies -->
+        <input type ="checkbox" name="veggie" id="gpepper" value="gpepper">
+        <label for ="gpepper">Green Peppers</label><br>
+        <input type ="checkbox" name="veggie" id="hpepper" value="hpepper">
+        <label for ="hpepper">Hot Peppers</label><br>
+        <input type ="checkbox" name="veggie" id="rpepper" value="rpepper">
+        <label for ="rpepper">Roasted Red Peppers</label><br>
+        <input type ="checkbox" name="veggie" id="artichoke" value="artichoke">
+        <label for ="artichoke">Artichoke</label><br>
+        <input type ="checkbox" name="veggie" id="jalapeno" value="jalapeno">
+        <label for ="jalapeno">Jalapeno</label><br>
+        <input type ="checkbox" name="veggie" id="onions" value="onions">
+        <label for ="onions">Onions</label><br>
+        <input type ="checkbox" name="veggie" id="tomato" value="tomato">
+        <label for ="tomato">Sliced Tomato</label><br>
+        <input type ="checkbox" name="veggie" id="broccoli" value="broccoli">
+        <label for ="broccoli">Broccoli</label><br>
+        <input type ="checkbox" name="veggie" id="spinach" value="spinach">
+        <label for ="spinach">Spinach</label>
+      </div> <!-- Input type checkbox so you can choose multiple -->
+      <div>
+        <input type ="checkbox" name="veggie" id="garlic" value="garlic">
+        <label for ="garlic">Garlic</label><br>
+        <input type ="checkbox" name="veggie" id="eggplant" value="eggplant">
+        <label for ="eggplant">Eggplant</label><br>
+        <input type ="checkbox" name="veggie" id="golives" value="golives">
+        <label for ="golives">Green Olives</label><br>
+        <input type ="checkbox" name="veggie" id="bolives" value="bolives">
+        <label for ="bolives">Black Olives</label><br>
+        <input type ="checkbox" name="veggie" id="mushroom" value="mushroom">
+        <label for ="mushroom">Mushrooms</label><br>
+        <input type ="checkbox" name="veggie" id="pineapple" value="pineapple">
+        <label for ="pineapple">Pineapple</label><br>
+        <input type ="checkbox" name="veggie" id="stomato" value="stomato">
+        <label for ="stomato">Sun Dried Tomato</label><br>
+        <input type ="checkbox" name="veggie" id="redonion" value="redonion">
+        <label for ="redonion">Red Onion</label><br>
+        <input type ="checkbox" name="veggie" id="zucchini" value="zucchini">
+        <label for ="zucchini">Zucchini</label><br>
+      </div>
+    </section> <!-- End of Veggie Section -->
+    <section> <!-- Pizza mod section -->
+      <h3>Pizza Mods</h3> <!-- Title for section -->
+      <br> <!-- br so inputs falls in line  -->
+      <div> <!-- Two column section for mods -->
+        <input type ="radio" name="cook" id="Lighlydone" value="Lightlydone">
+        <label for ="Lighlydone">Light Cook</label><br>
+        <input type ="radio" name="cook" id="original" value="original">
+        <label for ="original">Regular</label><br>
+      </div> <!-- Inputs are radio so you can only choose one -->
+      <div>
+        <input type ="radio" name="cook" id="welldone" value="welldone">
+        <label for ="welldone">Well Done</label><br>
+      </div>
+    </section> <!-- End of Mods section -->
+    <section> <!-- Customer section start -->
+      <h3>Customer Info</h3> <!-- Title  for section -->
+      <br> <!-- br for looks again -->
+      <div> <!-- Location two column section -->
+        <label for="city">City</label><br>
+        <select name ="city" id="city"> <!-- drop down menu for City -->
+          <option value="Barrie">Barrie</option>
+        </select><br>
+        <label for="address">Address</label><br>
+        <input type="text" name="address" id="address" placeholder="9999 Barrie Drive"><br>
+      </div> <!-- Input type text for address -->
+      <div> <!-- Input type email for the email -->
+        <label for="email">Email</label><br>
+        <input type="email" name="email" id="email" placeholder="hello@gmail.com"><br>
+        <label for="credit">Credit Card Info</label><br>
+        <input type="text" name="credit" id="credit" placeholder="XXXX-XXXX-XXXX-XXXX"><br>
+      </div>
+      <div> <!-- Additional comments for order -->
+        <label for="comments">Comments</label><br>
+        <textarea id="comments" name="comments" rows="4" cols="50" placeholder="Put Additional Info Here"></textarea><br>
+      </div> <!-- textarea for comments -->
+    </section> <!-- End of Customer info section -->
+  </form> <!-- End of Form -->
+</main> <!-- End of Main -->
+<aside> <!-- Aside Start -->
+  <article class="sticky"> <!-- article start, class id to make CSS easier -->
+    <h3>Order Setting</h3> <!-- Title for Order Setting -->
+    <input type="radio" name="method" id="delivery" value="delivery">
+    <label for="delivery">Delivery</label><br>
+    <input type="radio" name="method" id="pickup" value="pickup">
+    <label for="pickup">Pick-up</label><br> <!-- Inputs radio so you can only choose one -->
+    <hr> <!-- hr to split Order and Service -->
+    <h3>Service Method</h3> <!-- Title for Service Method -->
+    <input type="radio" name="time" id="now" value="now">
+    <label for="now">Now</label><br>
+    <input type="radio" name="time" id="future" value="now">
+    <label for="future">Future</label> <!-- Input radio so you can only choose one -->
+    <hr> <!-- hr to split Service and checkout/submit button -->
+    <input type="submit" form="form" value="Checkout" class="submit">
+    <!-- Checkout button to submit the form -->
+  </article> <!-- article end -->
+</aside> <!-- aside end -->
+<footer> <!-- footer start -->
+  <div> <!-- Two column section -->
+  <h5>Contact Us</h5> <!-- Title for contact info -->
+  <p>1096 Pizza Way<br> <!-- Contact info -->
+    Barrie,ON, L9M 6YM<br>
+    705-909-4589
+  </p>
+  </div>
+  <div class="policy"> <!-- Class set for easier CSS -->
+    <a target="_self" href="index.html">Privacy Policy</a>
+  </div> <!-- Set link for privacy policy -->
+</footer> <!-- End of Footer -->
+</body> <!-- End of Body -->
+</html> <!-- End of Html -->
+<!-- Did not comment labels because I think they are self-explanatory -->

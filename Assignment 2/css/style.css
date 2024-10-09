@@ -1,0 +1,85 @@
+body{
+    margin: 0px; /* Sets margin pixels to 0 */
+    background-color: #F0F0F0; /* Sets background color */
+}
+h1,h2,h3,h4,h5,h6{
+    font-family:"Poppins", sans-serif; /* Sets font type */
+}
+a,li{
+    font-family:"Roboto", sans-serif; /* Sets font type */
+    font-size: 20px; /* Sets font size */
+    text-decoration: none; /* Removes text decoration */
+    color: azure; /* Sets text color */
+}
+p,label{
+    font-family:"Roboto", sans-serif; /* Sets font type */
+    font-size: 13px; /* Sets font size */
+    text-decoration: none; /* Removes text decoration */
+}
+
+body{
+    display: grid; /* Sets background color */
+    grid-template-columns: 25% 25% 25% 25%; /* Sets each column to take up 25% */
+    grid-template-rows: auto; /* Sets rows to auto */
+    grid-template-areas: /* Determine how the grid areas are allocated */
+    'header header header header'
+    '. main main aside'
+    'footer footer footer footer';
+}
+header{
+    grid-area: header; /* Determines grid area is header */
+    display: grid; /* Sets display to grid */
+    grid-template-columns: 80% 20%; /* Sets 1st column to take up 80% and second to take up 20%*/
+    align-items: center; /* aligns item in center */
+    background-color: #202020; /* Sets background color */
+    height: 125px; /* Sets headers height */
+}
+header > div > a > img{
+    width: 400px; /* Sets images width to 400 pixels */
+    height: auto; /* Sets images height to auto */
+}
+main{
+    grid-area: main;/* Determine grid area belongs to main */
+
+}
+main > form > section{
+    display: grid; /* Sets display to grid */
+    grid-template-columns: 50% 50%; /* Sets each column to take up 50% */
+    padding-bottom: 1%; /* Sets 1% padding on bottom */
+    padding-top: 1%; /* Sets 1% padding on top */
+
+}
+aside{
+    grid-area: aside; /* Determines grid area belongs to aside */
+    display: grid; /* Sets display to grid */
+    grid-template-columns: 100%; /* Sets aside to use 100% of column */
+    grid-template-rows: auto; /* Sets row to auto */
+    background-color: 	#F8F8F8; /* Sets background color */
+}
+aside > article{
+    height: 1px; /* Height must be set in order for sticky to work */
+}
+footer {
+    grid-area: footer; /* Determines grid area belongs to footer */
+    display: grid; /* Sets display to grid */
+    grid-template-columns: 70% 30%; /* determines how columns are allocated */
+    background-color: #202020; /* Sets background color */
+    color: azure; /* Sets color of text in footer */
+}
+.submit{ /* Design for Checkout button */
+    height: 75px; /* Sets height of button */
+    width: 100%; /* Sets width to take up all of aside length */
+    background-color: darkred; /* Sets background color */
+    border-color: darkred; /* Sets border color */
+    font-size: 20px; /* Sets font size of text in button*/
+    font-family:"Poppins", sans-serif; /* Sets font type of text */
+    color: azure; /* Sets color of the text */
+}
+.policy{
+    align-self: center; /* centers text for Privacy Policy */
+}
+article.sticky{ /* Makes aside follow down the page using sticky */
+    position: sticky;
+    top: 0;
+
+}
